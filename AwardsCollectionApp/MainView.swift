@@ -10,6 +10,7 @@ import SwiftUI
 struct MainView: View {
     @State private var showAward = false
     @State private var animate = false
+    
     let secondaryAccentColor = Color("SecondaryAccentColor")
     
     var body: some View {
@@ -21,7 +22,6 @@ struct MainView: View {
                     Image(systemName: "chevron.up.square")
                         .scaleEffect(showAward ? 2 : 1)
                         .rotationEffect(.degrees(showAward ? 0 : 180))
-//                        .animation(.default, value: showAward)
                 }
             }
             
@@ -45,33 +45,15 @@ struct MainView: View {
                     .onAppear(perform: addAnimation)
                     .onDisappear(perform: { animate.toggle() })
             }
-                
-//                .offset(x: showAward ? 0 : -UIScreen.main.bounds.width)
-//                .animation(.spring().delay(0.3), value: showAward)
-//                .animation(
-//                    .spring(
-//                        response: 0.55, // продолжительность одного колебания (0...1)
-//                        dampingFraction: 0.45, // упругость
-//                        blendDuration: 0 // хз что
-//                    ),
-//                    value: showAward
-//                )
-//                .animation(
-//                    .interpolatingSpring(
-//                        mass: 1.0, // масса объекта
-//                        stiffness: 100, // жесткость пружины
-//                        damping: 10, // затухание (трение)
-//                        initialVelocity: 0 // начальное ускорение
-//                    ),
-//                    value: showAward
-//                )
             
             Spacer()
         }
         .font(.headline)
         .padding()
     }
-    
+}
+
+extension MainView {
     private func buttonAction() {
         withAnimation {
             showAward.toggle()
