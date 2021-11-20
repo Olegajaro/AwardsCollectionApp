@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1075AB0B2747A3A300767077 /* CustomGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1075AB0A2747A3A300767077 /* CustomGrid.swift */; };
+		1075AB0D2747FD4800767077 /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1075AB0C2747FD4800767077 /* Award.swift */; };
+		1075AB0F2748045600767077 /* VerticalGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1075AB0E2748045600767077 /* VerticalGridView.swift */; };
+		1075AB112748080C00767077 /* HorizontalGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1075AB102748080C00767077 /* HorizontalGridView.swift */; };
 		10F6514727427B2200856722 /* AwardsCollectionAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F6514627427B2200856722 /* AwardsCollectionAppApp.swift */; };
 		10F6514927427B2200856722 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F6514827427B2200856722 /* ContentView.swift */; };
 		10F6514B27427B2200856722 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10F6514A27427B2200856722 /* Assets.xcassets */; };
@@ -20,6 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1075AB0A2747A3A300767077 /* CustomGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGrid.swift; sourceTree = "<group>"; };
+		1075AB0C2747FD4800767077 /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
+		1075AB0E2748045600767077 /* VerticalGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalGridView.swift; sourceTree = "<group>"; };
+		1075AB102748080C00767077 /* HorizontalGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalGridView.swift; sourceTree = "<group>"; };
 		10F6514327427B2200856722 /* AwardsCollectionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AwardsCollectionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10F6514627427B2200856722 /* AwardsCollectionAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsCollectionAppApp.swift; sourceTree = "<group>"; };
 		10F6514827427B2200856722 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +52,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1075AB072747A2DB00767077 /* Awards */ = {
+			isa = PBXGroup;
+			children = (
+				10F6515827427C0F00856722 /* GradientRectangles.swift */,
+				10F6515A27427C1A00856722 /* PathView.swift */,
+				10F6515C27427C2200856722 /* CurvesView.swift */,
+				10F6515E2742BF6800856722 /* GuitarView.swift */,
+			);
+			path = Awards;
+			sourceTree = "<group>";
+		};
+		1075AB082747A31500767077 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				10F6514827427B2200856722 /* ContentView.swift */,
+				10F6515427427BE900856722 /* MainView.swift */,
+				10F6515627427BF800856722 /* AwardsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1075AB092747A32100767077 /* Grids */ = {
+			isa = PBXGroup;
+			children = (
+				1075AB0A2747A3A300767077 /* CustomGrid.swift */,
+				1075AB0E2748045600767077 /* VerticalGridView.swift */,
+				1075AB102748080C00767077 /* HorizontalGridView.swift */,
+				1075AB0C2747FD4800767077 /* Award.swift */,
+			);
+			path = Grids;
+			sourceTree = "<group>";
+		};
 		10F6513A27427B2200856722 = {
 			isa = PBXGroup;
 			children = (
@@ -64,15 +104,11 @@
 			isa = PBXGroup;
 			children = (
 				10F6514627427B2200856722 /* AwardsCollectionAppApp.swift */,
-				10F6514827427B2200856722 /* ContentView.swift */,
+				1075AB082747A31500767077 /* Views */,
+				1075AB072747A2DB00767077 /* Awards */,
+				1075AB092747A32100767077 /* Grids */,
 				10F6514A27427B2200856722 /* Assets.xcassets */,
 				10F6514C27427B2200856722 /* Preview Content */,
-				10F6515427427BE900856722 /* MainView.swift */,
-				10F6515627427BF800856722 /* AwardsView.swift */,
-				10F6515827427C0F00856722 /* GradientRectangles.swift */,
-				10F6515A27427C1A00856722 /* PathView.swift */,
-				10F6515C27427C2200856722 /* CurvesView.swift */,
-				10F6515E2742BF6800856722 /* GuitarView.swift */,
 			);
 			path = AwardsCollectionApp;
 			sourceTree = "<group>";
@@ -158,11 +194,15 @@
 				10F6515727427BF800856722 /* AwardsView.swift in Sources */,
 				10F6515D27427C2200856722 /* CurvesView.swift in Sources */,
 				10F6515B27427C1A00856722 /* PathView.swift in Sources */,
+				1075AB0D2747FD4800767077 /* Award.swift in Sources */,
 				10F6515927427C0F00856722 /* GradientRectangles.swift in Sources */,
+				1075AB0F2748045600767077 /* VerticalGridView.swift in Sources */,
 				10F6514927427B2200856722 /* ContentView.swift in Sources */,
 				10F6515F2742BF6800856722 /* GuitarView.swift in Sources */,
 				10F6515527427BE900856722 /* MainView.swift in Sources */,
 				10F6514727427B2200856722 /* AwardsCollectionAppApp.swift in Sources */,
+				1075AB112748080C00767077 /* HorizontalGridView.swift in Sources */,
+				1075AB0B2747A3A300767077 /* CustomGrid.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
