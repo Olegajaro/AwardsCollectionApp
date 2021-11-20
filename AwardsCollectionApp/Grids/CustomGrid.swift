@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct CustomGrid<Content, T1, T2>: View where Content: View {
+struct CustomGrid<Content, T1>: View where Content: View {
     
     let items: [T1]
     let columns: Int
-    let content: (T1, T2) -> Content
+    let content: (T1, CGFloat) -> Content
     
     var rows: Int {
         items.count / columns
@@ -27,7 +27,7 @@ struct CustomGrid<Content, T1, T2>: View where Content: View {
                         HStack {
                             ForEach(0..<columns) { columnIndex in
                                 if let index = indexFor(row: rowIndex, column: columnIndex) {
-                                    content(items[index], sideLength as! T2)
+                                    content(items[index], sideLength)
                                 } else {
                                     Spacer()
                                 }
@@ -43,6 +43,8 @@ struct CustomGrid<Content, T1, T2>: View where Content: View {
         let index = row * columns + column
         return index < items.count ? index : nil
     }
+    
+    
 }
 
 struct CustomGrid_Previews: PreviewProvider {
